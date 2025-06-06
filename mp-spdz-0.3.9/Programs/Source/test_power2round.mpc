@@ -1,0 +1,33 @@
+from Compiler.types import sint, Array, regint, cint
+from Compiler.comparison import BitLTL, LTZ, Mod2m
+
+def Mod(x, x_length, gamma):
+    from Compiler.types import sint
+    import math
+    l = x_length
+    m = int(math.ceil(math.log2(gamma)))
+    # m=log(gamma)
+    r_prime, r_prime_bin = sint.get_edabit(m, True)
+    r_double_prime, r_double_prime_bin = sint.get_edabit(l-m, True)
+    # 生成r'和r''
+    print_ln("type of r_prime_bin[0]: %s", type(r_prime_bin[0]))
+    temp = 2 ** (l-1) + x + gamma * r_double_prime + r_prime
+    c = temp.reveal()
+    # 公开2^(l-1)+x+gamma*r''+r'
+    c_prime = c % gamma
+    # c'=c mod gamma
+    temp1 = sint()
+    BitLTL(temp1, cint(gamma), r_prime_bin)
+    v = 1 - temp1
+    u = sint()
+    LTZ(u, c_prime - r_prime + v * gamma, m)
+    res = c_prime - r_prime + gamma * (v + u)
+    return res    
+
+def power2round(x, x_length, d, q):
+    x_prime = Mod(x, x_length, q)
+    Mod2m(x0_prime, x_prime, x_length, d, True)
+    LTZ(t, 2 ** (d-1), x0_prime)
+    x0 = (1-t) * x0_prime + t * (x0_prime - 2 ** d)
+    x1 = 2 ** (-d) *(x' - x0)
+    ret x1,x0

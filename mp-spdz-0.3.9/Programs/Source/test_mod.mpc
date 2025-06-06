@@ -1,0 +1,37 @@
+# test_mod.py
+from Compiler.types import sint, Array, regint, cint
+from Compiler.comparison import BitLTL, LTZ
+
+def Mod(x, x_length, gamma):
+    from Compiler.types import sint
+    import math
+    l = x_length
+    m = int(math.ceil(math.log2(gamma)))
+    # m=log(gamma)
+    r_prime, r_prime_bin = sint.get_edabit(m, True)
+    r_double_prime, r_double_prime_bin = sint.get_edabit(l-m, True)
+    # 生成r'和r''
+    print_ln("type of r_prime_bin[0]: %s", type(r_prime_bin[0]))
+    temp = 2 ** (l-1) + x + gamma * r_double_prime + r_prime
+    c = temp.reveal()
+    # 公开2^(l-1)+x+gamma*r''+r'
+    c_prime = c % gamma
+    # c'=c mod gamma
+    temp1 = sint()
+    BitLTL(temp1, cint(gamma), r_prime_bin)
+    v = 1 - temp1
+    u = sint()
+    LTZ(u, c_prime - r_prime + v * gamma, m)
+    res = c_prime - r_prime + gamma * (v + u)
+    return res
+    
+# 测试用例参数
+x_values = [0, 1, 2, 17, 31, 32, 63, 64, 127, 128, 255, 256, -1, -17]
+gamma = 17
+x_length = 16
+
+# 遍历测试
+for x_plain in x_values:
+    x = sint(x_plain)   # 明文转秘密共享
+    res = Mod(x, x_length, gamma)
+    print_ln('x = %s, x %% gamma = %s, Mod(x) = %s', x_plain, x_plain % gamma, res.reveal())
