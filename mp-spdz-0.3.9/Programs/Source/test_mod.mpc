@@ -10,18 +10,24 @@ def Mod(x, x_length, gamma):
     # m=log(gamma)
     r_prime, r_prime_bin = sint.get_edabit(m, True)
     r_double_prime, r_double_prime_bin = sint.get_edabit(l-m, True)
+
+    print_ln("l = %s, m = %s, r_prime = %s, r_double_prime = %s", l, m, r_prime.reveal(), r_double_prime.reveal())
     # 生成r'和r''
     print_ln("type of r_prime_bin[0]: %s", type(r_prime_bin[0]))
     temp = 2 ** (l-1) + x + gamma * r_double_prime + r_prime
     c = temp.reveal()
+    print_ln("c = %s", c)
     # 公开2^(l-1)+x+gamma*r''+r'
     c_prime = c % gamma
+    print_ln("c_prime = %s", c_prime)
     # c'=c mod gamma
     temp1 = sint()
     BitLTL(temp1, cint(gamma), r_prime_bin)
+    print_ln("temp1 = %s", temp.reveal())
     v = 1 - temp1
     u = sint()
     LTZ(u, c_prime - r_prime + v * gamma, m)
+    print("u = %s", u.reveal())
     res = c_prime - r_prime + gamma * (v + u)
     return res
     

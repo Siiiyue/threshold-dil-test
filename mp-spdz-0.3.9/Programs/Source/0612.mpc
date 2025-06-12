@@ -1,0 +1,16 @@
+import math
+
+l = 4
+gamma = 5
+m = int(math.ceil(math.log2(gamma)))
+
+r_prime, r_prime_bin = sint.get_edabit(m, True)
+print_ln("r_prime = %s", r_prime.reveal())
+r_double_prime, r_double_prime_bin = sint.get_edabit(l-m, True)
+print_ln("r_double_prime = %s", r_double_prime.reveal())
+
+x = 10
+
+temp = 2 ** (l-1) + x + gamma * r_double_prime + r_prime
+c = temp.reveal()
+print_ln("c = %s", c)

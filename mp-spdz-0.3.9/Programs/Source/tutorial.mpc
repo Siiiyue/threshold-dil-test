@@ -3,6 +3,8 @@
 
 # you can assign public numbers to sint
 
+program.use_edabit(True)
+
 a = sint(1)
 b = sint(2)
 
