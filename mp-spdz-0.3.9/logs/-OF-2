@@ -1,0 +1,3 @@
+Using statistical security parameter 40
+Cannot access Player-Data/P2.pem. Have you set up SSL?
+You can use `Scripts/setup-ssl.sh <nparties>`.

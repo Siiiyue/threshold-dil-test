@@ -1,0 +1,12 @@
+Using statistical security parameter 40
+r_prime = 0
+r_double_prime = 1
+c = 23
+Significant amount of unused triples of Tinier distorting the benchmark. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused triples of Tinier distorting the benchmark. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 1. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 3. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+The following benchmarks are including preprocessing (offline phase).
+Time = 386.51 seconds 
+Data sent = 711.473 MB in ~999 rounds (party 0 only; use '-v' for more details)
+Global data sent = 1422.95 MB (all parties)

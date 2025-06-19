@@ -1,16 +1,16 @@
 # Offline data, runtime logs #
 ##############################
-Player-Data
-Player-Data/*
-Prep-Data/*
-logs/*
-Language-Definition/main.pdf
-keys/*
+#Player-Data
+#Player-Data/*
+#Prep-Data/*
+#logs/*
+#Language-Definition/main.pdf
+#keys/*
 
 # Personal CONFIG file #
 ##############################
-CONFIG.mine
-config_mine.py
+#CONFIG.mine
+#config_mine.py
 
 # Temporary files #
 ###################
@@ -46,9 +46,9 @@ callgrind.out.*
 
 # Compiled source #
 ###################
-Programs/Bytecode/*
-Programs/Schedules/*
-Programs/Public-Input/*
+#Programs/Bytecode/*
+#Programs/Schedules/*
+#Programs/Public-Input/*
 *.com
 *.class
 *.dll
