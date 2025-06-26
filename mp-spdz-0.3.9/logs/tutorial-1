@@ -1,1 +1,23 @@
 Using statistical security parameter 40
+Significant amount of unused edaBits of size 15. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 16. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 30. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 31. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 32. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 33. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 40. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 41. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 55. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 64. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 70. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 71. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 72. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 73. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 74. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 87. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused edaBits of size 89. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+Significant amount of unused triples of Tinier distorting the benchmark. This protocol has a large minimum batch size, which makes this unavoidable for small programs.
+The following benchmarks are including preprocessing (offline phase).
+Time = 190.038 seconds 
+Data sent = 7435.18 MB in ~59782 rounds (party 1 only; use '-v' for more details)
+Global data sent = 14870.4 MB (all parties)
