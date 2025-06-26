@@ -2,13 +2,13 @@
 
 This project holds the code for the testing phase of threshold dilithium.
 
-## dilithium-py-main
-This folder holds the code for the python implementation of dilithium. We can test the functionality of dilithium by executing the following command in ``/tests``:
+## dilithium
+This folder holds the code for the official implementation of dilithium. We can test the functionality of dilithium by executing the following command in ``/ref``:
 
 ```
-python3.9 test_dilithium.py
+test/test_dilithium2/3/5
 ```
-The relevant code for dilithium is stored in ``/src/dilithium_py/dilithium/dilithium.py``.
+The relevant code for dilithium is stored in ``/dilithium/ref/sign.c``.
 
 The scheme consists three main parts: ``KeyGen, Sign, Verify``:
 1. ``KeyGen->(pk, sk)``: generate a bit-packed keypair ``(pk, sk)``.
